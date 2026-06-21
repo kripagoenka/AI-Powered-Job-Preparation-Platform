@@ -1,91 +1,234 @@
-🚀 AI-Powered Job Preparation Platform
-A production-ready, full-stack web application designed to streamline the job preparation process. Built with the MERN stack and seamlessly integrated with Google's Gemini AI, this platform empowers users with personalized, generative AI-driven insights to help them excel in interviews and career planning.
+# 🚀 AI-Powered Job Preparation Platform
 
-✨ Features
-Generative AI Integration: Leverages the Google Gemini API to generate customized mock interview questions, resume feedback, and tailored learning roadmaps.
+A production-ready, full-stack web application designed to streamline the job preparation journey using Generative AI. Built with the MERN Stack and powered by Google's Gemini AI, the platform helps users prepare for interviews, improve resumes, identify skill gaps, and create personalized learning roadmaps.
 
-Secure Authentication: Robust user authentication, authorization, and session management implemented using JSON Web Tokens (JWT) and Bcrypt password hashing.
+## ✨ Features
 
-Scalable Architecture: A fully decoupled RESTful backend built with Node.js and Express to handle complex AI service requests efficiently.
+### 🤖 Generative AI Integration
 
-Dynamic User Interface: A highly responsive and interactive frontend developed with React.js, designed for an intuitive user experience.
+* AI-generated mock interview questions tailored to specific job roles.
+* Personalized resume feedback and improvement suggestions.
+* Customized learning roadmaps based on career goals and skill levels.
+* Intelligent career guidance powered by Google Gemini AI.
 
-Data Persistence: Secure and structured storage of user profiles, session histories, and AI-generated insights using MongoDB.
+### 🔐 Secure Authentication
 
-🛠️ Tech Stack
-Client: React.js, Vite (or Create React App), Tailwind CSS (if applicable)
+* User registration and login functionality.
+* JWT-based authentication and authorization.
+* Password encryption using Bcrypt.
+* Secure session management and protected routes.
 
-Server: Node.js, Express.js
+### ⚡ Scalable Architecture
 
-Database: MongoDB, Mongoose
+* RESTful API built using Node.js and Express.js.
+* Modular backend architecture for maintainability and scalability.
+* Efficient handling of AI requests and user data.
 
-Integrations & Security: Google Gemini AI API, JWT, CORS, Dotenv
+### 🎨 Dynamic User Interface
 
-⚙️ Local Development Setup
-Follow these steps to set up the project locally on your machine.
+* Responsive and interactive frontend developed with React.js.
+* Clean and user-friendly dashboard experience.
+* Fast navigation and seamless user interactions.
 
-Prerequisites
-Make sure you have the following installed and set up:
+### 💾 Data Persistence
 
-Node.js (v16 or higher)
+* MongoDB database for storing user profiles and activity.
+* Secure storage of AI-generated interview sessions and recommendations.
+* Structured data management using Mongoose.
 
-MongoDB (Local installation or MongoDB Atlas URI)
+---
 
-A Google Gemini API Key
+## 🛠️ Tech Stack
 
-1. Clone the repository
-Bash
+### Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+* Axios
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+* Mongoose
+
+### AI & Security
+
+* Google Gemini AI API
+* JWT Authentication
+* Bcrypt
+* CORS
+* Dotenv
+
+---
+
+## ⚙️ Local Development Setup
+
+### Prerequisites
+
+Ensure the following are installed:
+
+* Node.js (v16 or higher)
+* MongoDB (Local Installation or MongoDB Atlas)
+* Google Gemini API Key
+
+---
+
+### Clone Repository
+
+```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
-2. Backend Setup
-Navigate to the backend directory, install dependencies, and configure environment variables.
+```
 
-Bash
+---
+
+### Backend Setup
+
+Navigate to the backend directory:
+
+```bash
 cd backend
 npm install
-Create a .env file in the backend root and add the following:
+```
 
-Code snippet
+Create a `.env` file:
+
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_super_secret_jwt_key
 GEMINI_API_KEY=your_google_gemini_api_key
-3. Frontend Setup
-Open a new terminal window, navigate to the frontend directory, and install dependencies.
+```
 
-Bash
-cd frontend
-npm install
-Create a .env file in the frontend root (if you are using Vite, prefix with VITE_):
-
-Code snippet
-VITE_API_BASE_URL=http://localhost:5000/api
-4. Running the Application
 Start the backend server:
 
-Bash
-# In the backend directory
+```bash
 npm run dev
+```
+
+---
+
+### Frontend Setup
+
+Open a new terminal and navigate to the frontend directory:
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env` file:
+
+```env
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
 Start the frontend development server:
 
-Bash
-# In the frontend directory
+```bash
 npm run dev
-The application should now be running. The frontend is typically accessible at http://localhost:5173 (Vite) or http://localhost:3000 (CRA), and the backend is listening on http://localhost:5000.  
+```
 
-📂 Folder Structure
-Plaintext
+The application will typically run on:
+
+* Frontend: `http://localhost:5173`
+* Backend: `http://localhost:5000`
+
+---
+
+## 📂 Folder Structure
+
+```plaintext
 📦 project-root
- ┣ 📂 backend
- ┃ ┣ 📂 controllers    # API endpoint logic
- ┃ ┣ 📂 models         # Mongoose schemas
- ┃ ┣ 📂 routes         # Express routing
- ┃ ┣ 📂 middleware     # JWT verification, error handling
- ┃ ┣ 📂 services       # Gemini API integration logic
- ┃ ┗ 📜 server.js      # Entry point for backend
- ┗ 📂 frontend
- ┃ ┣ 📂 src
- ┃ ┃ ┣ 📂 components   # Reusable UI components
- ┃ ┃ ┣ 📂 pages        # Application views (Home, Dashboard, etc.)
- ┃ ┃ ┣ 📂 context      # React context for state management (Auth)
- ┃ ┃ ┗ 📜 App.jsx      # Main application routing
+┣ 📂 backend
+┃ ┣ 📂 controllers      # API endpoint logic
+┃ ┣ 📂 models           # Mongoose schemas
+┃ ┣ 📂 routes           # Express routing
+┃ ┣ 📂 middleware       # JWT verification & error handling
+┃ ┣ 📂 services         # Gemini AI integration logic
+┃ ┗ 📜 server.js        # Backend entry point
+┃
+┗ 📂 frontend
+  ┣ 📂 src
+  ┃ ┣ 📂 components     # Reusable UI components
+  ┃ ┣ 📂 pages          # Application pages
+  ┃ ┣ 📂 context        # Authentication & state management
+  ┃ ┗ 📜 App.jsx        # Main application routing
+```
+
+---
+
+## 🎯 Key Functionalities
+
+### AI Mock Interviews
+
+Generate role-specific interview questions and answers for:
+
+* Software Engineering
+* Data Science
+* Web Development
+* Cloud Computing
+* Product Management
+* Custom Roles
+
+### Resume Analysis
+
+* ATS-friendly recommendations
+* Resume improvement suggestions
+* Skill gap identification
+
+### Personalized Learning Roadmaps
+
+* Career-focused learning paths
+* Technology recommendations
+* Skill development planning
+
+### User Dashboard
+
+* Access interview history
+* Save AI-generated responses
+* Track preparation progress
+
+---
+
+## 🔒 Security Features
+
+* JWT Authentication
+* Password Hashing with Bcrypt
+* Protected API Routes
+* Environment Variable Protection
+* Secure User Session Management
+
+---
+
+## 🚀 Future Enhancements
+
+* AI-powered Resume Scoring
+* Voice-Based Mock Interviews
+* Job Recommendation Engine
+* Real-Time Interview Simulations
+* Progress Analytics Dashboard
+* Multi-Language Support
+
+---
+
+## 📈 Impact
+
+The platform simplifies interview preparation and career planning by combining modern web technologies with Generative AI. It enables users to receive personalized guidance, improve their resumes, practice interviews effectively, and build structured learning plans—all within a single application.
+
+---
+
+## 👩‍💻 Author
+
+**Kripa Goenka**
+
+B.Tech Computer Science Engineering
+MIT World Peace University (MIT-WPU), Pune
+
+Passionate about Generative AI, Full-Stack Development, Cloud Technologies, and building impactful software solutions.
